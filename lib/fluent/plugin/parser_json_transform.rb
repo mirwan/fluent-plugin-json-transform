@@ -24,7 +24,7 @@ module Fluent
         end
 
         if DEFAULTS.include?(@transform_script)
-          @transform_script = File.dirname(__FILE__)+"../../transform/#{@transform_script}.rb"
+          @transform_script = File.dirname(__FILE__)+"/../../transform/#{@transform_script}.rb"
         elsif @transform_script == 'custom'
           @transform_script = @script_path
         end
